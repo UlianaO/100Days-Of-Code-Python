@@ -1,18 +1,4 @@
 # This is a simple coffee machine to put a few of OOP principles into practice
-# # Turtle documentation: https://docs.python.org/3/library/turtle.html
-# # Python packages: https://pypi.org/
-# from turtle import Turtle, Screen
-# import prettytable
-#
-#
-# tommy = Turtle()
-# tommy.shape("turtle")
-# tommy.color("aquamarine4")
-# tommy.forward(100)
-# my_screen = Screen()
-# print(my_screen.canvheight)
-#
-# my_screen.exitonclick()
 
 from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker
