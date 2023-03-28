@@ -1,4 +1,5 @@
 # The exercise is done to practice syntax and OOP
+# The question bank can be created at https://opentdb.com/api_config.php
 
 from question_model import Question
 from data import question_data
