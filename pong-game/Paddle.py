@@ -1,5 +1,6 @@
 # Describes paddles for the Ping Pong game
 from turtle import Turtle
+from Scoreboard import Scoreboard
 
 
 class Paddle(Turtle):
@@ -12,10 +13,12 @@ class Paddle(Turtle):
         self.penup()
         self.goto(position)
         print("Paddle Created2")
+        self.score = 0
 
     def go_up(self):
         new_y = self.ycor() + 20
         self.goto(self.xcor(), new_y)
+
 
     def go_down(self):
         new_y = self.ycor() - 20
