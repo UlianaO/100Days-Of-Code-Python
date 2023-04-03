@@ -32,7 +32,7 @@ while game_on:
     snake.move()
 
     # Detect collision with food
-    if snake.head.distance(food) < 15:  # if snake`s head is 15 pixels away from the food
+    if snake.head.distance(food) < 18:  # if snake`s head is 15 pixels away from the food
         food.refresh_food()
         scoreboard.update_score()
         snake.increase_size()
