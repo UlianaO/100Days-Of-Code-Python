@@ -12,6 +12,7 @@ class Ball(Turtle):
         self.x_move = 10
         self.y_move = 10
         self.speed(1)
+        self.moving_speed = 0.1
 
     def move(self):
         """ Moves by gradually incresing/decreasing x and y coordinates."""
@@ -27,6 +28,10 @@ class Ball(Turtle):
     def bounce_x(self):
         # Reverse X direction of the ball.
         self.x_move = self.x_move * (-1)
+        # Each time the ball bounces off the paddle, it increases speed.
+        self.moving_speed *= 0.9
 
     def reset_position(self):
         self.goto(0, 0)
+        self.moving_speed = 0.1
+        self.bounce_x()
