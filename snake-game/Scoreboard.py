@@ -1,14 +1,16 @@
-from turtle import Turtle, TurtleScreen
+from turtle import Turtle
 
 TITLE_ALIGNMENT = "center"
 TITLE_FONT = ('Courier', 20, 'normal')
+
 
 class Scoreboard(Turtle):
 
     def __init__(self):
         super().__init__()  # Screen class
         self.score = 0
-        self.highest_score = 0
+        with open("high_score.txt") as data:
+            self.highest_score = int(data.read())
         self.hideturtle()
         self.center_title()
         self.update_board()
@@ -29,6 +31,8 @@ class Scoreboard(Turtle):
         # Save the current score as the highest if greater.
         if self.score > self.highest_score:
             self.highest_score = self.score
+            with open("high_score.txt", mode="w") as data:
+                data.write(f"{self.highest_score}")
         # Reset the score
         self.score = 0
         self.update_board()
