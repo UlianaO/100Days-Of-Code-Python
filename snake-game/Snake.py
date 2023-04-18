@@ -30,6 +30,14 @@ class Snake:
         snake.shape("square")
         self.full_snake.append(snake)
 
+    def reset_snake(self):
+        # Sending the unused turtle object beyond the screen since can`t remove.
+        for segment in self.full_snake:
+            segment.goto(1000, 1000)
+        self.full_snake.clear()
+        self.create_snake()
+        self.head = self.full_snake[0]
+
     def move(self):
         """Snake moves by repositioning each segment to the position of the segment in the front"""
         for segment in range(len(self.full_snake) - 1, 0, -1):  # starting with len(segments), move the previous segment to the current place
