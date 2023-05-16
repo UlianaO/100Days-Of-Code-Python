@@ -22,7 +22,6 @@ print(monday.Condition) # == print(data[data.Day == "Monday"].Condition)
 
 temp = int(monday.Temp.iloc[0])  # iloc[0] get rid of the warning
 tempF = temp* 9/5 + 32
-print(tempF)
 
 # Create a dataframe from scratch if you have a dictionary
 data_dict = {
