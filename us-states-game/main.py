@@ -49,10 +49,8 @@ while len(guess_states) < 50:
 
 # Once the game is over, show the states that were bot guessed by the player during the game so they can learn.
 # Compare guessed states with all_states.
-missed_states = []
-for state in all_states:
-    if state not in guess_states:
-        missed_states.append(state)
+
+missed_states = [state for state in all_states if state not in guess_states]
 
 # Save missed states to CSV
 new_data = pandas.DataFrame(missed_states)
