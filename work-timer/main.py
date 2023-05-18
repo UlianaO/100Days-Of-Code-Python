@@ -27,7 +27,7 @@ def reset_timer():
     global reps
     reps = 0
 
-# ---------------------------- TIMER MECHANISM ------------------------------- # 
+# ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
     start_but["state"] = "disabled"  # disable the button so no parallel timer is running
     global reps
@@ -43,7 +43,7 @@ def start_timer():
         count_down(WORK_MIN * 60)
         timer_label.config(text="Work", fg=RED)
 
-# ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
+# ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 
 def count_down(count):
     """ Recursive function takes in the number of seconds"""
