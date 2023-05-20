@@ -112,7 +112,7 @@ website_ent.grid(column=1, row=1, sticky="EW")
 
 email_ent = Entry()
 email_ent.grid(column=1, row=2, columnspan=2, sticky="EW")
-email_ent.insert(0, "ulyana.ozerova@gmail.com")
+email_ent.insert(0, "test@gmail.com")
 
 password_ent = Entry()
 password_ent.grid(column=1, row=3, sticky="EW")
