@@ -15,7 +15,7 @@ class QuizInterface:
         self.window.config(padx=10, pady=15, bg=BG_COLOR)
 
         # Labels
-        self.score_lbl = Label(text="Score:", fg="blue", bg=BG_COLOR)
+        self.score_lbl = Label(text="Score:", fg=CARD_THEME, bg=BG_COLOR, font=QUESTION_FONT)
         self.score_lbl.grid(row=0, column=1)
 
         # Canvas
